@@ -1,0 +1,8 @@
+version: '3'
+
+tasks:
+  docs-server:
+    cmds:
+      - meltano invoke dbt-postgres:docs-generate
+      - meltano invoke dbt-postgres:docs-serve --port 3080
+    silent: true
